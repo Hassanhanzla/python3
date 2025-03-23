@@ -1,0 +1,410 @@
+'''
+1. capitalize()
+Description: Converts the first character of the string to uppercase and the rest to lowercase.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.capitalize())  # Output: Hello world
+2. casefold()
+Description: Converts the string into lowercase (more aggressive than lower() for case-insensitive comparisons).
+
+Example:
+
+python
+Copy
+text = "HELLO World"
+print(text.casefold())  # Output: hello world
+3. center(width, fillchar)
+Description: Returns a centered string of a specified width, padded with a specified character (default is space).
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.center(10, "-"))  # Output: --hello---
+4. count(substring, start, end)
+Description: Returns the number of times a specified substring occurs in the string.
+
+Example:
+
+python
+Copy
+text = "hello hello world"
+print(text.count("hello"))  # Output: 2
+5. encode(encoding, errors)
+Description: Returns an encoded version of the string (default encoding is utf-8).
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.encode())  # Output: b'hello'
+6. endswith(suffix, start, end)
+Description: Returns True if the string ends with the specified suffix.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.endswith("world"))  # Output: True
+7. expandtabs(tabsize)
+Description: Sets the tab size (default is 8) and replaces tabs with spaces.
+
+Example:
+
+python
+Copy
+text = "hello\tworld"
+print(text.expandtabs(4))  # Output: hello   world
+8. find(substring, start, end)
+Description: Searches for a substring and returns the index of the first occurrence. Returns -1 if not found.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.find("world"))  # Output: 6
+9. format(*args, **kwargs)
+Description: Formats specified values into the string.
+
+Example:
+
+python
+Copy
+text = "Hello, {name}!"
+print(text.format(name="Alice"))  # Output: Hello, Alice!
+10. format_map(mapping)
+Description: Similar to format(), but uses a dictionary for formatting.
+
+Example:
+
+python
+Copy
+data = {"name": "Alice"}
+text = "Hello, {name}!"
+print(text.format_map(data))  # Output: Hello, Alice!
+11. index(substring, start, end)
+Description: Searches for a substring and returns the index of the first occurrence. Raises an error if not found.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.index("world"))  # Output: 6
+12. isalnum()
+Description: Returns True if all characters in the string are alphanumeric (letters or numbers).
+
+Example:
+
+python
+Copy
+text = "hello123"
+print(text.isalnum())  # Output: True
+13. isalpha()
+Description: Returns True if all characters in the string are alphabetic.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.isalpha())  # Output: True
+14. isascii()
+Description: Returns True if all characters in the string are ASCII characters.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.isascii())  # Output: True
+15. isdecimal()
+Description: Returns True if all characters in the string are decimal digits.
+
+Example:
+
+python
+Copy
+text = "123"
+print(text.isdecimal())  # Output: True
+16. isdigit()
+Description: Returns True if all characters in the string are digits.
+
+Example:
+
+python
+Copy
+text = "123"
+print(text.isdigit())  # Output: True
+17. isidentifier()
+Description: Returns True if the string is a valid Python identifier (e.g., variable name).
+
+Example:
+
+python
+Copy
+text = "hello_world"
+print(text.isidentifier())  # Output: True
+18. islower()
+Description: Returns True if all characters in the string are lowercase.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.islower())  # Output: True
+19. isnumeric()
+Description: Returns True if all characters in the string are numeric.
+
+Example:
+
+python
+Copy
+text = "123"
+print(text.isnumeric())  # Output: True
+20. isprintable()
+Description: Returns True if all characters in the string are printable.
+
+Example:
+
+python
+Copy
+text = "hello\nworld"
+print(text.isprintable())  # Output: False
+21. isspace()
+Description: Returns True if all characters in the string are whitespace.
+
+Example:
+
+python
+Copy
+text = "   "
+print(text.isspace())  # Output: True
+22. istitle()
+Description: Returns True if the string follows title case rules (first letter of each word is capitalized).
+
+Example:
+
+python
+Copy
+text = "Hello World"
+print(text.istitle())  # Output: True
+23. isupper()
+Description: Returns True if all characters in the string are uppercase.
+
+Example:
+
+python
+Copy
+text = "HELLO"
+print(text.isupper())  # Output: True
+24. join(iterable)
+Description: Joins elements of an iterable (e.g., list) into a single string.
+
+Example:
+
+python
+Copy
+words = ["hello", "world"]
+print("-".join(words))  # Output: hello-world
+25. ljust(width, fillchar)
+Description: Returns a left-justified string of a specified width, padded with a specified character.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.ljust(10, "-"))  # Output: hello-----
+26. lower()
+Description: Converts the string to lowercase.
+
+Example:
+
+python
+Copy
+text = "HELLO"
+print(text.lower())  # Output: hello
+27. lstrip(chars)
+Description: Removes leading whitespace (or specified characters) from the string.
+
+Example:
+
+python
+Copy
+text = "   hello"
+print(text.lstrip())  # Output: hello
+28. maketrans(x, y, z)
+Description: Creates a translation table for translate().
+
+Example:
+
+python
+Copy
+text = "hello"
+trans = text.maketrans("h", "H")
+print(text.translate(trans))  # Output: Hello
+29. partition(separator)
+Description: Splits the string into three parts (before, separator, after) and returns a tuple.
+
+Example:
+
+python
+Copy
+text = "hello-world"
+print(text.partition("-"))  # Output: ('hello', '-', 'world')
+30. replace(old, new, count)
+Description: Replaces occurrences of a substring with another substring.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.replace("world", "Python"))  # Output: hello Python
+31. rfind(substring, start, end)
+Description: Searches for a substring and returns the index of the last occurrence. Returns -1 if not found.
+
+Example:
+
+python
+Copy
+text = "hello world world"
+print(text.rfind("world"))  # Output: 12
+32. rindex(substring, start, end)
+Description: Searches for a substring and returns the index of the last occurrence. Raises an error if not found.
+
+Example:
+
+python
+Copy
+text = "hello world world"
+print(text.rindex("world"))  # Output: 12
+33. rjust(width, fillchar)
+Description: Returns a right-justified string of a specified width, padded with a specified character.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.rjust(10, "-"))  # Output: -----hello
+34. rpartition(separator)
+Description: Splits the string into three parts (before, separator, after) starting from the right.
+
+Example:
+
+python
+Copy
+text = "hello-world-world"
+print(text.rpartition("-"))  # Output: ('hello-world', '-', 'world')
+35. rsplit(separator, maxsplit)
+Description: Splits the string at the specified separator, starting from the right, and returns a list.
+
+Example:
+
+python
+Copy
+text = "hello world world"
+print(text.rsplit(" ", 1))  # Output: ['hello world', 'world']
+36. rstrip(chars)
+Description: Removes trailing whitespace (or specified characters) from the string.
+
+Example:
+
+python
+Copy
+text = "hello   "
+print(text.rstrip())  # Output: hello
+37. split(separator, maxsplit)
+Description: Splits the string at the specified separator and returns a list.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.split(" "))  # Output: ['hello', 'world']
+38. splitlines(keepends)
+Description: Splits the string at line breaks and returns a list.
+
+Example:
+
+python
+Copy
+text = "hello\nworld"
+print(text.splitlines())  # Output: ['hello', 'world']
+39. startswith(prefix, start, end)
+Description: Returns True if the string starts with the specified prefix.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.startswith("hello"))  # Output: True
+40. strip(chars)
+Description: Removes leading and trailing whitespace (or specified characters) from the string.
+
+Example:
+
+python
+Copy
+text = "   hello   "
+print(text.strip())  # Output: hello
+41. swapcase()
+Description: Swaps the case of all characters in the string (lowercase becomes uppercase and vice versa).
+
+Example:
+
+python
+Copy
+text = "Hello World"
+print(text.swapcase())  # Output: hELLO wORLD
+42. title()
+Description: Converts the first character of each word to uppercase.
+
+Example:
+
+python
+Copy
+text = "hello world"
+print(text.title())  # Output: Hello World
+43. translate(table)
+Description: Returns a translated string using a translation table.
+
+Example:
+
+python
+Copy
+text = "hello"
+trans = str.maketrans("h", "H")
+print(text.translate(trans))  # Output: Hello
+44. upper()
+Description: Converts the string to uppercase.
+
+Example:
+
+python
+Copy
+text = "hello"
+print(text.upper())  # Output: HELLO
+45. zfill(width)
+Description: Fills the string with zeros on the left until it reaches the specified width.
+
+Example:
+
+python
+Copy
+text = "42"
+print(text.zfill(5))  # Output: 00042'
+'''
